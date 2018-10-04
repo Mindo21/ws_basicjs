@@ -47,3 +47,9 @@ function arraySet(arr, index, number){
         arr[index] = number;
     }
 }
+
+// ------------ FUNCTIONS --------------
+
+function addAll(arr){
+    return arr.reduce((a,b) => a + b);
+}
