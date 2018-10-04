@@ -86,3 +86,27 @@ let remembered;
 function rememberThis(x){
     remembered = x;
 }
+
+function nArray(n){
+    //let arr = Array.from({length:n}, (value, index) => index + 1);
+    /*for (let i = 0; i < n; i++){
+        arr[i] = i + 1;
+    }*/
+    return Array.from(Array(n), (value, index) => index + 1);
+}
+
+function addAllOpt(arr){
+    if (!Array.isArray(arr))
+        return 0;
+    if (arr.length <= 0)
+        return 0;
+    return arr.reduce((accumulator, currentElement) => accumulator + currentElement);
+}
+
+function divisors(arr, divisor){
+    return arr.filter((value) => value % divisor == 0);
+}
+
+function multiples(n, m){
+    return Array.from(Array(n), (v, i) => (i+1) * m);
+}
