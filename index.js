@@ -53,3 +53,26 @@ function arraySet(arr, index, number){
 function addAll(arr){
     return arr.reduce((a,b) => a + b);
 }
+
+function larger(a,b){
+    return a > b ? a : b;
+}
+
+function largest(arr){
+    return arr.reduce((a,b) => Math.max(a,b));
+}
+
+function compare(arr1, arr2){
+    if (!arr1 || !arr2)
+        return false;
+
+    if (arr1.length != arr2.length)
+        return false;
+
+    for (let i = 0; i < arr1.length; i++){
+        if (arr1[i] != arr2[i])
+            return false;
+    }
+
+    return true;
+}
