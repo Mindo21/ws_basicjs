@@ -76,3 +76,13 @@ function compare(arr1, arr2){
 
     return true;
 }
+
+function addToAll(arr, num){
+    return arr.map(a => a + num);
+}
+
+let remembered;
+
+function rememberThis(x){
+    remembered = x;
+}
