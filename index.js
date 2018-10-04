@@ -37,5 +37,13 @@ function checkObject(obj){
 }
 
 function checkObjectInside(obj){
-    obj.checked = true;
+    if (typeof obj.data === "object"){
+      obj.data.checked = true;
+    }
+}
+
+function arraySet(arr, index, number){
+    if(arr.length > index && index >= 0 && Number.isInteger(index)){
+        arr[index] = number;
+    }
 }
